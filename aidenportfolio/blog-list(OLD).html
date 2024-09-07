@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aiden Tran - Portfolio</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS
+    ============================================ -->
+
+    <!-- Vendor CSS (Contain Bootstrap, Icon Fonts) -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/icofont.min.css" />
+
+    <!-- Plugin CSS (Global Plugins Files) -->
+    <link rel="stylesheet" href="assets/css/plugins/animate.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/venobox.min.css" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Minify Version -->
+    <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css"> -->
+
+</head>
+
+<body>
+
+    <main class="main-wrapper">
+        <!-- .....:::::: Start Header Section :::::.... -->
+        <header class="header-section sticky-header d-none d-lg-block">
+            <div class="header-wrapper">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col">
+                            <!-- Start Header Logo -->
+                            <a href="index.html" class="header-logo">
+                                <h1>Aiden Tran</h1>
+                            </a>
+                            <!-- End Header Logo -->
+                        </div>
+                        <div class="col-auto">
+                            <!-- Start Header Menu -->
+                            <ul class="header-nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="has-dropdown">
+                                    <a href="portfolio-list.html">Portfolios</a>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="project-list.html">Projects</a>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="blog-list.html">Blog</a>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="cv.html">CV</a></li>
+                            </ul>
+                            <!-- End Header Menu -->
+                        </div>
+                        <div class="col">
+                            <div class="header-btn-link text-end">
+                               <a href="contact.html" class="btn btn-sm btn-outline-one icon-space-left">Hire Me <i class="icofont-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- .....:::::: End Header Section :::::.... -->
+
+        <!-- .....:::::: Start Mobile Header Section :::::.... -->
+        <div class="mobile-header d-block d-lg-none">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col">
+                        <div class="mobile-logo">
+                            <h1>Aiden Tran</h1>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mobile-action-link text-end">
+                            <a href="#mobile-menu-offcanvas" class="offcanvas-toggle offside-menu"><i class="icofont-navigation-menu"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .....:::::: Start MobileHeader Section :::::.... -->
+
+        <!--  Start Offcanvas Mobile Menu Section -->
+        <div id="mobile-menu-offcanvas" class="offcanvas offcanvas-rightside offcanvas-mobile-menu-section">
+            <!-- Start Offcanvas Header -->
+            <div class="offcanvas-header text-end">
+                <button class="offcanvas-close"><i class="icofont-close-line"></i></button>
+            </div> <!-- End Offcanvas Header -->
+            <!-- Start Offcanvas Mobile Menu Wrapper -->
+            <div class="offcanvas-mobile-menu-wrapper">
+                <!-- Start Mobile Menu  -->
+                <div class="mobile-menu-bottom">
+                    <!-- Start Mobile Menu Nav -->
+                    <div class="offcanvas-menu">
+                        <ul>
+                            <li>
+                                <a href="index.html"><span>Home</span></a>
+                            </li>
+                            <li>
+                                <a href="portfolio-list.html"><span>Portfolios</span></a>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="project-list.html"><span>Projects</span></a>
+                            </li>
+                            <li>
+                                <a href="blog-list.html"><span>Blog</span></a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html"><span>Contact</span></a>
+                            </li>
+                            <li>
+                                <a href="cv.html"><span>CV</span></a>
+                            </li>
+                        </ul>
+                    </div> <!-- End Mobile Menu Nav -->
+                </div> <!-- End Mobile Menu -->
+
+                <!-- Start Mobile contact Info -->
+                <div class="mobile-contact-info text-center">
+                    <ul class="social-link">
+                        <li><a target="_blank" href="https://www.facebook.com/profile.php?id=100005083987843"><i class="icofont-facebook"></i></a>
+                        </li>
+                        <li><a target="_blank" href="https://www.instagram.com/tuan_kiett/"><i class="icofont-instagram"></i></a>
+                        </li>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/aidentran/"><i class="icofont-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <!-- End Mobile contact Info -->
+
+            </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+        </div>
+        <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+
+        <!-- Offcanvas Overlay -->
+        <div class="offcanvas-overlay"></div>
+
+        <!-- ...::: Start Breadcrumb Section :::... -->
+        <div class="breadcrumb-section section-bg overflow-hidden pos-relative">
+            <div class="breadcrumb-shape-top-left"></div>
+            <div class="breadcrumb-shape-bottom-right"></div>
+            <div class="breadcrumb-box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumb-content">
+                                <h2 class="title">Blog List</h2>
+                                <ul class="breadcrumb-link">
+                                    <li class="active" aria-current="page">Blog List</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ...::: End Breadcrumb Section :::... -->
+
+        <!-- ...::: Start Blog List Section :::... -->
+        <div class="blog-list-section section-mt-165">
+            <div class="blog-list-box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <!--  Start Blog List  -->
+                            <div class="blog-list">
+
+
+                                <!-- Start Blog List  Single Item-->
+
+
+
+
+
+                                <div class="blog-list-single-item">
+                                    <div class="inner-shape inner-shape-top-right"></div>
+                                    <a href="" class="image">
+                                        <img src="assets/images/blog/blog-details-content-inner-img-3.jpg" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <div class="post-meta-1">
+                                            <a href="#" class="catagory">Amazon Web Services(AWS)</a>
+                                            <a href="#" class="date">21 April, 2024</a>
+                                        </div>
+                                        <h4 class="title"><a href="./blogs/Enhancing-EC2-Instances-Security-with-IAM-Roles.html">Enhancing EC2 Instances Security with IAM Roles</a></h4>
+
+                                        <div class="post-meta-2">
+                                            <a class="icon-space-right"><i class="icofont-ui-user"></i>Aiden Tran</a>
+                                            <!-- <a href="#" class="icon-space-right"><i class="icofont-heart"></i>5,678</a>
+                                            <a href="#" class="icon-space-right"><i class="icofont-speech-comments"></i>2,567</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="blog-list-single-item">
+                                    <div class="inner-shape inner-shape-top-right"></div>
+                                    <a href="" class="image">
+                                        <img src="assets/images/blog/Understanding EC2 Purchasing Options.png" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <div class="post-meta-1">
+                                            <a href="#" class="catagory">Amazon Web Services(AWS)</a>
+                                            <a href="#" class="date">24 April, 2024</a>
+                                        </div>
+                                        <h4 class="title"><a href="./blogs/Understanding-EC2-Puurchasing-Options.html">Understanding EC2 Purchasing Options</a></h4>
+
+                                        <div class="post-meta-2">
+                                            <a class="icon-space-right"><i class="icofont-ui-user"></i>Aiden Tran</a>
+                                            <!-- <a href="#" class="icon-space-right"><i class="icofont-heart"></i>5,678</a>
+                                            <a href="#" class="icon-space-right"><i class="icofont-speech-comments"></i>2,567</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="blog-list-single-item">
+                                    <div class="inner-shape inner-shape-top-right"></div>
+                                    <a href="" class="image">
+                                        <img src="assets/images/blog/Optimizing EC2 Performance with Placement Groups.png" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <div class="post-meta-1">
+                                            <a href="#" class="catagory">Amazon Web Services(AWS)</a>
+                                            <a href="#" class="date">25 April, 2024</a>
+                                        </div>
+                                        <h4 class="title"><a href="./blogs/Optimizing-EC2-Performance-With-Placement-Groups.html">Optimizing EC2 Performance With Placement Groups</a></h4>
+
+                                        <div class="post-meta-2">
+                                            <a class="icon-space-right"><i class="icofont-ui-user"></i>Aiden Tran</a>
+                                            <!-- <a href="#" class="icon-space-right"><i class="icofont-heart"></i>5,678</a>
+                                            <a href="#" class="icon-space-right"><i class="icofont-speech-comments"></i>2,567</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="blog-list-single-item">
+                                    <div class="inner-shape inner-shape-top-right"></div>
+                                    <a href="" class="image">
+                                        <img src="assets/images/blog/S3 Lifecycle Rules Automate Storage Efficiency.png" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <div class="post-meta-1">
+                                            <a href="#" class="catagory">Amazon Web Services(AWS)</a>
+                                            <a href="#" class="date">30 April, 2024</a>
+                                        </div>
+                                        <h4 class="title"><a href="./blogs/S3-Lifecycle-Rules-Automate-Storage-Efficiency.html">S3 Lifecycle Rules - Automate Storage Efficiency</a></h4>
+
+                                        <div class="post-meta-2">
+                                            <a class="icon-space-right"><i class="icofont-ui-user"></i>Aiden Tran</a>
+                                            <!-- <a href="#" class="icon-space-right"><i class="icofont-heart"></i>5,678</a>
+                                            <a href="#" class="icon-space-right"><i class="icofont-speech-comments"></i>2,567</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="blog-list-single-item">
+                                    <div class="inner-shape inner-shape-top-right"></div>
+                                    <a href="" class="image">
+                                        <img src="assets/images/blog/IAM Best Practices for Optimal AWS Security.png" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <div class="post-meta-1">
+                                            <a href="#" class="catagory">Amazon Web Services(AWS)</a>
+                                            <a href="#" class="date">23 April, 2024</a>
+                                        </div>
+                                        <h4 class="title"><a href="./blogs/IAM-Best-Practices-For-Optimal-AWS-Security.html">IAM Best Practices For Optimal AWS Security</a></h4>
+
+                                        <div class="post-meta-2">
+                                            <a class="icon-space-right"><i class="icofont-ui-user"></i>Aiden Tran</a>
+                                            <!-- <a href="#" class="icon-space-right"><i class="icofont-heart"></i>5,678</a>
+                                            <a href="#" class="icon-space-right"><i class="icofont-speech-comments"></i>2,567</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="blog-list-single-item">
+                                    <div class="inner-shape inner-shape-top-right"></div>
+                                    <a href="" class="image">
+                                        <img src="assets/images/blog/Hosting Static Websites on Amazon S3.png" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <div class="post-meta-1">
+                                            <a href="#" class="catagory">Amazon Web Services(AWS)</a>
+                                            <a href="#" class="date">22 April, 2024</a>
+                                        </div>
+                                        <h4 class="title"><a href="./blogs/Hosting-Static-Websites-on-Amazon-S3.html">Hosting Static Websites on Amazon S3</a></h4>
+
+                                        <div class="post-meta-2">
+                                            <a class="icon-space-right"><i class="icofont-ui-user"></i>Aiden Tran</a>
+                                            <!-- <a href="#" class="icon-space-right"><i class="icofont-heart"></i>5,678</a>
+                                            <a href="#" class="icon-space-right"><i class="icofont-speech-comments"></i>2,567</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="blog-list-single-item">
+                                    <div class="inner-shape inner-shape-top-right"></div>
+                                    <a href="" class="image">
+                                        <img src="assets/images/blog/Exploiting S3 Analytics, Versioning, and Replication for Data Optimization.png" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <div class="post-meta-1">
+                                            <a href="#" class="catagory">Amazon Web Services(AWS)</a>
+                                            <a href="#" class="date">1 May, 2024</a>
+                                        </div>
+                                        <h4 class="title"><a href="./blogs/Exploiting-S3-Analytics-Versioning-and-Replication-for-Data-Optimization.html">Exploiting S3 Analytics, Versioning, and Replication for Data Optimization</a></h4>
+
+                                        <div class="post-meta-2">
+                                            <a class="icon-space-right"><i class="icofont-ui-user"></i>Aiden Tran</a>
+                                            <!-- <a href="#" class="icon-space-right"><i class="icofont-heart"></i>5,678</a>
+                                            <a href="#" class="icon-space-right"><i class="icofont-speech-comments"></i>2,567</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="blog-list-single-item">
+                                    <div class="inner-shape inner-shape-top-right"></div>
+                                    <a href="" class="image">
+                                        <img src="assets/images/blog/Comparing Amazon EBS and EFS.png" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <div class="post-meta-1">
+                                            <a href="#" class="catagory">Amazon Web Services(AWS)</a>
+                                            <a href="#" class="date">26 April, 2024</a>
+                                        </div>
+                                        <h4 class="title"><a href="./blogs/Comparing-Amazon-EBS-and-EFS-for-Optimized-Storage.html">Comparing Amazon EBS and EFS for Optimized Storage</a></h4>
+
+                                        <div class="post-meta-2">
+                                            <a class="icon-space-right"><i class="icofont-ui-user"></i>Aiden Tran</a>
+                                            <!-- <a href="#" class="icon-space-right"><i class="icofont-heart"></i>5,678</a>
+                                            <a href="#" class="icon-space-right"><i class="icofont-speech-comments"></i>2,567</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+                                <div class="blog-list-single-item">
+                                    <div class="inner-shape inner-shape-top-right"></div>
+                                    <a href="" class="image">
+                                        <img src="assets/images/blog/Mastering Amazon S3 Encryption Ensuring Data Security.png" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <div class="post-meta-1">
+                                            <a href="#" class="catagory">Amazon Web Services(AWS)</a>
+                                            <a href="#" class="date">02 May 2024</a>
+                                        </div>
+                                        <h4 class="title"><a href="./blogs/Amazon S3-Mastering-Three-Powerful-Server-Side-Encryption.html">Amazon S3 - Mastering Three Powerful Server-Side Encryption</a></h4>
+
+                                        <div class="post-meta-2">
+                                            <a class="icon-space-right"><i class="icofont-ui-user"></i>Aiden Tran</a>
+                                            <!-- <a href="#" class="icon-space-right"><i class="icofont-heart"></i>5,678</a>
+                                            <a href="#" class="icon-space-right"><i class="icofont-speech-comments"></i>2,567</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+                                <div class="blog-list-single-item">
+                                    <div class="inner-shape inner-shape-top-right"></div>
+                                    <a href="blog-details-sidebar-left.html" class="image">
+                                        <img src="assets/images/blog/blog-details-content-inner-img-2.jpg" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <div class="post-meta-1">
+                                            <a href="#" class="catagory">University Project</a>
+                                            <a href="#" class="date">18 April, 2024</a>
+                                        </div>
+                                        <h4 class="title"><a href="./blogs/Advancing-Data-Management-My-Journey-with-MongoDB-and-Docker.html">Advancing Data Management: My Journey with MongoDB and Docker</a></h4>
+
+                                        <div class="post-meta-2">
+                                            <a class="icon-space-right"><i class="icofont-ui-user"></i>Aiden Tran</a>
+                                            <!-- <a href="#" class="icon-space-right"><i class="icofont-heart"></i>5,678</a>
+                                            <a href="#" class="icon-space-right"><i class="icofont-speech-comments"></i>2,567</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="blog-list-single-item">
+                                    <div class="inner-shape inner-shape-top-right"></div>
+                                    <a href="blog-details-sidebar-left.html" class="image">
+                                        <img src="assets/images/blog/blog-details-content-inner-img-1.jpg" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <div class="post-meta-1">
+                                            <a href="#" class="catagory">University Project</a>
+                                            <a href="#" class="date">19 March, 2024</a>
+                                        </div>
+                                        <h4 class="title"><a href="./blogs/Sharing-My-Journey-Developing-a-Music-Tech-Project-at-University.html">Sharing My Journey: Developing a Music Tech Project at University</a></h4>
+
+                                        <div class="post-meta-2">
+                                            <a class="icon-space-right"><i class="icofont-ui-user"></i>Aiden Tran</a>
+                                            <!-- <a href="#" class="icon-space-right"><i class="icofont-heart"></i>5,678</a>
+                                            <a href="#" class="icon-space-right"><i class="icofont-speech-comments"></i>2,567</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                            <div class="d-flex justify-content-center justify-content-lg-start">
+                                <!--  Start Pagination  -->
+                                <div class="pagination">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <ul class="pagination-nav-list">
+                                                <li class="prev"><a href="#"><i class="icofont-double-left"></i></a></li>
+                                                <li><a href="#">1</a></li>
+                                                <li class="active"><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li class="next"><a href="#"><i class="icofont-double-right"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  Start Pagination  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ...::: End Blog List Section :::... -->
+
+  
+
+        <!-- ...::: Start Footer Section :::... -->
+        <footer class="footer-section section-bg overflow-hidden pos-relative">
+            <div class="footer-inner-shape-top-left"></div>
+            <div class="footer-inner-shape-top-right"></div>
+            </div>
+            <div class="footer-center section-gap-tb-165">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center mb-n5">
+                        <div class="col-auto mb-5">
+                            <!-- Start Single Footer Info -->
+                            <div class="footer-single-info">
+                                <a href="tel:+0123456789" class="info-box">
+                                    <span class="icon"><i class="icofont-phone"></i></span>
+                                    <span class="text">+61422909791</span>
+                                </a>
+                            </div>
+                            <!-- Start Single Footer Info -->
+                        </div>
+                        <div class="col-auto mb-5">
+                            <!-- Start Single Footer Info -->
+                            <div class="footer-single-info">
+                                <a href="mailto:demo@example.com" class="info-box">
+                                    <span class="icon"><i class="icofont-envelope-open"></i></span>
+                                    <span class="text">aidenkiettran@gmail.com</span>
+                                </a>
+                            </div>
+                            <!-- Start Single Footer Info -->
+                        </div>
+                        <div class="col-auto mb-5">
+                            <!-- Start Single Footer Info -->
+                            <div class="footer-single-info">
+                                <ul class="social-link">
+                                    <li><a href="https://www.facebook.com/profile.php?id=100005083987843" target="_blank"><i class="icofont-facebook"></i></a></li>
+                                    <li><a href="https://www.instagram.com/tuan_kiett/" target="_blank"><i class="icofont-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/aiden-tran-190a19197/" target="_blank"><i class="icofont-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- Start Single Footer Info -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row justify-content-center justify-content-md-between align-items-center flex-column-reverse flex-md-row">
+                        <div class="col-auto">
+                            <div class="footer-copyright">
+                                <p class="copyright-text">&copy; 2024 Made by <a href="" target="_blank">Aiden Tran</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ...::: End Footer Section :::... -->
+
+
+        <!-- material-scrolltop button -->
+        <button class="material-scrolltop" type="button"></button>
+    </main>
+
+    <!-- Global Vendor, plugins JS -->
+
+    <!-- JS Files
+    ============================================ -->
+    <!-- Global Vendor, plugins JS -->
+
+    <!-- Vendor JS -->
+    <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    
+    <!--Plugins JS-->
+    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugins/jquery.appear.min.js"></script>
+    <script src="assets/js/plugins/venobox.min.js"></script>
+    <script src="assets/js/plugins/jquery.waypoints.js"></script>
+    <script src="assets/js/plugins/images-loaded.min.js"></script>
+    <script src="assets/js/plugins/isotope.pkgd.min.js"></script>
+    <script src="assets/js/plugins/counter.js"></script>
+    <script src="assets/js/plugins/ajax-mail.js"></script>
+    <script src="assets/js/plugins/material-scrolltop.js"></script>
+
+    <!-- Minify Version -->
+    <!-- <script src="assets/js/vendor.min.js"></script>
+    <script src="assets/js/plugins.min.js"></script> -->
+
+    <!--Main JS (Common Activation Codes)-->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
