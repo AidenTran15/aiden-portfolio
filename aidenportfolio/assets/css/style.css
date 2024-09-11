@@ -1650,6 +1650,7 @@ p:last-child {
   background: #252734;
   padding: 45px;
   overflow: hidden;
+  
 }
 @media (min-width: 768px) {
   .service-box-single-item {
