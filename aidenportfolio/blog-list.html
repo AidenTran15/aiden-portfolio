@@ -184,11 +184,13 @@
                                 <div class="sidebar-widget-single-area catagory-widgets">
                                     <h3 class="title">Category</h3>
                                     <ul class="widget-nav-list catagory-item-list">
+                                        <li><a href="#" data-category="all">All</a></li>
                                         <li><a href="#" data-category="aws">AWS</a></li>
                                         <li><a href="#" data-category="event">Event</a></li>
                                         <li><a href="#" data-category="word-game">Word Game</a></li>
                                     </ul>
                                 </div>
+                                
                             </div>
                             <!-- End Sidebar Widget Area -->
                         </div>
@@ -569,13 +571,13 @@ document.addEventListener('DOMContentLoaded', function () {
     categoryLinks.forEach(function (link) {
         link.addEventListener('click', function (event) {
             event.preventDefault();
-            const selectedCategory = this.getAttribute('data-category');
+            const selectedCategory = this.getAttribute('data-category').toLowerCase();
             const blogPosts = document.querySelectorAll('.blog-list-single-item');
 
             blogPosts.forEach(function (post) {
-                const postCategory = post.getAttribute('data-category');
-                if (postCategory === selectedCategory || selectedCategory === "All") {
-                    post.style.display = 'flex';  // Use flex instead of block to ensure layout consistency
+                const postCategory = post.getAttribute('data-category').toLowerCase();
+                if (postCategory === selectedCategory || selectedCategory === "all") {
+                    post.style.display = 'flex';
                 } else {
                     post.style.display = 'none';
                 }
@@ -584,74 +586,79 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
     </script>
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const blogsPerPage = 4; // Number of blogs per page
-                let currentCategory = "All"; // Default category
-                let currentPage = 1;
-                const blogPosts = Array.from(document.querySelectorAll('.blog-list-single-item'));
-                const paginationElement = document.getElementById('pagination');
-                const totalPages = Math.ceil(blogPosts.length / blogsPerPage);
-    
-                // Function to display blogs based on the current page and category
-                function displayBlogs(page) {
-                    const filteredBlogs = blogPosts.filter(blog => blog.getAttribute('data-category') === currentCategory || currentCategory === "All");
-                    const start = (page - 1) * blogsPerPage;
-                    const end = start + blogsPerPage;
-    
-                    blogPosts.forEach(post => post.style.display = 'none'); // Hide all posts
-    
-                    filteredBlogs.slice(start, end).forEach(post => post.style.display = 'flex'); // Show the filtered and paginated posts
-                }
-    
-                // Function to generate pagination buttons
-                function generatePagination() {
-                    paginationElement.innerHTML = '';
-                    const filteredBlogs = blogPosts.filter(blog => blog.getAttribute('data-category') === currentCategory || currentCategory === "All");
-                    const totalFilteredPages = Math.ceil(filteredBlogs.length / blogsPerPage);
-    
-                    for (let i = 1; i <= totalFilteredPages; i++) {
-                        const pageItem = document.createElement('li');
-                        pageItem.classList.add('page-item');
-                        pageItem.innerHTML = `<a href="#" class="page-link" data-page="${i}">${i}</a>`;
-                        paginationElement.appendChild(pageItem);
-                    }
-    
-                    // Add event listeners for pagination links
-                    const pageLinks = paginationElement.querySelectorAll('.page-link');
-                    pageLinks.forEach(link => {
-                        link.addEventListener('click', function (event) {
-                            event.preventDefault();
-                            const selectedPage = parseInt(this.getAttribute('data-page'));
-                            currentPage = selectedPage;
-                            displayBlogs(currentPage);
-                        });
-                    });
-                }
-    
-                // Function to update blogs and pagination when category changes
-                function updateBlogList(category) {
-                    currentCategory = category;
-                    currentPage = 1;
-                    displayBlogs(currentPage);
-                    generatePagination();
-                }
-    
-                // Initial blog display
+document.addEventListener('DOMContentLoaded', function () {
+    const blogsPerPage = 4; // Number of blogs per page
+    let currentCategory = "all"; // Default category
+    let currentPage = 1;
+    const blogPosts = Array.from(document.querySelectorAll('.blog-list-single-item'));
+    const paginationElement = document.getElementById('pagination');
+
+    // Function to display blogs based on the current page and category
+    function displayBlogs(page) {
+        const filteredBlogs = blogPosts.filter(blog => {
+            const postCategory = blog.getAttribute('data-category').toLowerCase();
+            return postCategory === currentCategory || currentCategory === "all";
+        });
+        const totalFilteredPages = Math.ceil(filteredBlogs.length / blogsPerPage);
+        const start = (page - 1) * blogsPerPage;
+        const end = start + blogsPerPage;
+
+        blogPosts.forEach(post => post.style.display = 'none'); // Hide all posts
+
+        filteredBlogs.slice(start, end).forEach(post => post.style.display = 'flex'); // Show the filtered and paginated posts
+
+        // Update pagination links
+        generatePagination(totalFilteredPages);
+    }
+
+    // Function to generate pagination buttons
+    function generatePagination(totalPages) {
+        paginationElement.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageItem = document.createElement('li');
+            pageItem.classList.add('page-item');
+            pageItem.innerHTML = `<a href="#" class="page-link" data-page="${i}">${i}</a>`;
+            paginationElement.appendChild(pageItem);
+        }
+
+        // Add event listeners for pagination links
+        const pageLinks = paginationElement.querySelectorAll('.page-link');
+        pageLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const selectedPage = parseInt(this.getAttribute('data-page'));
+                currentPage = selectedPage;
                 displayBlogs(currentPage);
-                generatePagination();
-    
-                // Category filter logic
-                const categoryLinks = document.querySelectorAll('.catagory-item-list a');
-                categoryLinks.forEach(link => {
-                    link.addEventListener('click', function (event) {
-                        event.preventDefault();
-                        const selectedCategory = this.getAttribute('data-category');
-                        updateBlogList(selectedCategory);
-                    });
-                });
             });
+        });
+    }
+
+    // Function to update blogs and pagination when category changes
+    function updateBlogList(category) {
+        currentCategory = category.toLowerCase();
+        currentPage = 1;
+        displayBlogs(currentPage);
+    }
+
+    // Initial blog display
+    displayBlogs(currentPage);
+
+    // Category filter logic
+    const categoryLinks = document.querySelectorAll('.catagory-item-list a');
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const selectedCategory = this.getAttribute('data-category');
+            updateBlogList(selectedCategory);
+        });
+    });
+});
+
+
         </script>
     
 
